@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/geography-quiz-game/static/css/main.af2fde5d.chunk.css",
-    "main.js": "/geography-quiz-game/static/js/main.03fab642.chunk.js",
-    "main.js.map": "/geography-quiz-game/static/js/main.03fab642.chunk.js.map",
-    "runtime-main.js": "/geography-quiz-game/static/js/runtime-main.521efb74.js",
-    "runtime-main.js.map": "/geography-quiz-game/static/js/runtime-main.521efb74.js.map",
-    "static/js/2.d27c1544.chunk.js": "/geography-quiz-game/static/js/2.d27c1544.chunk.js",
-    "static/js/2.d27c1544.chunk.js.map": "/geography-quiz-game/static/js/2.d27c1544.chunk.js.map",
-    "static/js/3.802e3fc9.chunk.js": "/geography-quiz-game/static/js/3.802e3fc9.chunk.js",
-    "static/js/3.802e3fc9.chunk.js.map": "/geography-quiz-game/static/js/3.802e3fc9.chunk.js.map",
-    "index.html": "/geography-quiz-game/index.html",
-    "static/css/main.af2fde5d.chunk.css.map": "/geography-quiz-game/static/css/main.af2fde5d.chunk.css.map",
-    "static/js/2.d27c1544.chunk.js.LICENSE.txt": "/geography-quiz-game/static/js/2.d27c1544.chunk.js.LICENSE.txt"
+    "main.css": "/Geography-Quiz-Game/static/css/main.af2fde5d.chunk.css",
+    "main.js": "/Geography-Quiz-Game/static/js/main.03fab642.chunk.js",
+    "main.js.map": "/Geography-Quiz-Game/static/js/main.03fab642.chunk.js.map",
+    "runtime-main.js": "/Geography-Quiz-Game/static/js/runtime-main.f2c6920f.js",
+    "runtime-main.js.map": "/Geography-Quiz-Game/static/js/runtime-main.f2c6920f.js.map",
+    "static/js/2.d27c1544.chunk.js": "/Geography-Quiz-Game/static/js/2.d27c1544.chunk.js",
+    "static/js/2.d27c1544.chunk.js.map": "/Geography-Quiz-Game/static/js/2.d27c1544.chunk.js.map",
+    "static/js/3.802e3fc9.chunk.js": "/Geography-Quiz-Game/static/js/3.802e3fc9.chunk.js",
+    "static/js/3.802e3fc9.chunk.js.map": "/Geography-Quiz-Game/static/js/3.802e3fc9.chunk.js.map",
+    "index.html": "/Geography-Quiz-Game/index.html",
+    "static/css/main.af2fde5d.chunk.css.map": "/Geography-Quiz-Game/static/css/main.af2fde5d.chunk.css.map",
+    "static/js/2.d27c1544.chunk.js.LICENSE.txt": "/Geography-Quiz-Game/static/js/2.d27c1544.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.521efb74.js",
+    "static/js/runtime-main.f2c6920f.js",
     "static/js/2.d27c1544.chunk.js",
     "static/css/main.af2fde5d.chunk.css",
     "static/js/main.03fab642.chunk.js"
