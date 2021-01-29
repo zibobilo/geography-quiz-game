@@ -32,9 +32,9 @@ class App extends React.Component {
       .then(res => res.json())
       .then(
         (result) => {
-          result.map(el => {
-            el.population = Math.round(el.population / 1000000).toLocaleString('en')
-            if (el.capital === "") el.capital = "N/A"
+          result.map(row => {
+            row.population = Math.round(row.population / 1000000).toLocaleString('en')
+            if (row.capital === "") row.capital = "N/A"
             return ""
           })
           this.setState({ isLoaded: true, data: result })

@@ -32,7 +32,6 @@ class GameOn extends React.Component {
   nextQuestion() {
     const { qN, gamePlaying, allGames } = this.state
     this.setState({ qN: qN + 1 })
-
     switch (gamePlaying) {
       case allGames[0].game:
         this.buildingQuizz("name", "capital")
@@ -49,18 +48,16 @@ class GameOn extends React.Component {
 
   buildingQuizz(question, answer) {
     const { data } = this.state
-    let rightAnswer = this.generateI()
-
-    let possibleAnswers = [data[rightAnswer][answer]]
-
+    let rightAnswerIdx = this.generateI()
+    let possibleAnswers = [data[rightAnswerIdx][answer]]
     while (possibleAnswers.length < 4) {
       let test = this.generateI()
       if (!possibleAnswers.includes(data[test][answer])) possibleAnswers.push(data[test][answer]);
     }
     possibleAnswers.sort()
     this.setState({
-      correctAnswer: data[rightAnswer][answer],
-      correctTitle: data[rightAnswer][question],
+      correctAnswer: data[rightAnswerIdx][answer],
+      correctTitle: data[rightAnswerIdx][question],
       possibleAnswers: possibleAnswers
     })
   }
@@ -89,8 +86,8 @@ class GameOn extends React.Component {
   }
 
   render() {
-    const { qN, home, inGame, allGames, gamePlaying, correctTitle, goodAnswer,
-      correctResponse, possibleAnswers, numberOfCorrectAnswers, correctFlagURL } = this.state
+    const { qN, home, inGame, allGames, gamePlaying, correctTitle, goodAnswer, correctResponse,
+      possibleAnswers, numberOfCorrectAnswers, correctFlagURL } = this.state
     if (home) {
       return (
         <>
@@ -102,44 +99,23 @@ class GameOn extends React.Component {
           </div>
         </>
       )
-    } else if (inGame && gamePlaying === allGames[1].game) {
-      return (
-        <div className="container inner">
-          <h1>{gamePlaying}: Question {qN}</h1>
-          <h2>{allGames[1].startQuestion}</h2>
-          <img alt="Quizz flag" src={correctTitle}></img>
-          <div id="buttons">
-            {possibleAnswers.map((el, i) => <button key={el} onClick={() => this.evaluate(el, i)}>{el}</button>)}
-          </div>
-          {(qN - 1) % 10 ?
-            <>
-              <div className={goodAnswer ? "correct" : "wrong"}>{correctResponse}
-              </div>
-              <img alt="Quizz flag" style={{ width: "80px" }} src={correctFlagURL}></img>
-              <div>Your score is {numberOfCorrectAnswers}/{qN - 1}</div>
-            </>
-            : <></>}
-        </div>
-      )
     } else if (inGame) {
       return (
         <div className="container inner">
-          <h1> {gamePlaying}: Question {qN}</h1>
+          <h1>{gamePlaying}: Question {qN}</h1>
           <h2>
-            {gamePlaying === allGames[0].game ? allGames[0].startQuestion : allGames[2].startQuestion}<b> {correctTitle}?</b>
-
-            {gamePlaying === allGames[2].game && <><br />Rounded in Millions</>}
+            {gamePlaying === allGames[0].game && <>{allGames[0].startQuestion}<b> {correctTitle}?</b></>}
+            {gamePlaying === allGames[1].game && <>{allGames[1].startQuestion}</>}
+            {gamePlaying === allGames[2].game && <>{allGames[2].startQuestion}<b> {correctTitle}?</b><br />Rounded in Millions</>}
           </h2>
-          <div id="buttons">
-            {possibleAnswers.map((el, i) => <button key={el} onClick={() => this.evaluate(el, i)}>{el}</button>)}
-          </div>
-          {(qN - 1) % 10 ?
+          { gamePlaying === allGames[1].game && <img alt="Quizz flag" src={correctTitle}></img>}
+          <div id="buttons">{possibleAnswers.map((el, i) => <button key={el} onClick={() => this.evaluate(el, i)}>{el}</button>)}</div>
+          {(qN - 1) % 10 !== 0 &&
             <>
-              <div className={goodAnswer ? "correct" : "wrong"}>
-                {correctResponse}
-              </div>
+              <div className={goodAnswer ? "correct" : "wrong"}>{correctResponse}</div>
+              {gamePlaying === allGames[1].game && <><img alt="Quizz flag" style={{ width: "80px" }} src={correctFlagURL}></img></>}
               <div>Your score is {numberOfCorrectAnswers}/{qN - 1}</div>
-            </> : <></>}
+            </>}
         </div>
       )
     } else if (!inGame) {
