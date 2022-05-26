@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/geography-quiz-game/static/css/main.af2fde5d.chunk.css",
-    "main.js": "/geography-quiz-game/static/js/main.9d57283b.chunk.js",
-    "main.js.map": "/geography-quiz-game/static/js/main.9d57283b.chunk.js.map",
+    "main.js": "/geography-quiz-game/static/js/main.fa9e1f0a.chunk.js",
+    "main.js.map": "/geography-quiz-game/static/js/main.fa9e1f0a.chunk.js.map",
     "runtime-main.js": "/geography-quiz-game/static/js/runtime-main.521efb74.js",
     "runtime-main.js.map": "/geography-quiz-game/static/js/runtime-main.521efb74.js.map",
     "static/js/2.d27c1544.chunk.js": "/geography-quiz-game/static/js/2.d27c1544.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.521efb74.js",
     "static/js/2.d27c1544.chunk.js",
     "static/css/main.af2fde5d.chunk.css",
-    "static/js/main.9d57283b.chunk.js"
+    "static/js/main.fa9e1f0a.chunk.js"
   ]
 }
