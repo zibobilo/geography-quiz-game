@@ -28,7 +28,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://restcountries.com/rest/v2/all?fields=name;capital;population;flag")
+    fetch("https://restcountries.com/v2/all?fields=name,capital,population,flag")
       .then(res => res.json())
       .then(
         (result) => {
