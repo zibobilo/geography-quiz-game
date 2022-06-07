@@ -34,7 +34,7 @@ class App extends React.Component {
         (result) => {
           result.map(row => {
             row.population = Math.round(row.population / 1000000).toLocaleString('en')
-            if (row.capital === "") row.capital = "N/A"
+            if (!row.capital) row.capital = "N/A"
             return ""
           })
           this.setState({ isLoaded: true, data: result })
